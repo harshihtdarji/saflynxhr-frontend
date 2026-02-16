@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --back-color: #0d1323;
+    --text-color: #00e5ff;
+    --title-color: white;
+    --input-color: rgb(0, 9, 53);
+    --sub-title-color: rgb(185, 185, 185);
+}
+
+body {
+    background: var(--back-color);
+
+}
+
+.container {
+    /* border: 2px solid white; */
+    height: 60vh;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-image: url(back-image.png); */
+    background-size: cover;
+}
+
+/* ---------- Loader ---------- */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+    background: #11162a;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+/* Loader */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 15, 26, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: var(--text-color);
+}
+
+.page-loader .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid transparent;
+    border-top: 6px solid var(--text-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.page-loader p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* .search-url{
+    background-color: rgba(0, 0, 0, 0.518);
+    padding: 20px;
+    border-radius: 10px;
+    height: 250px;  
+}  */
+
+.search-url input[type=search] {
+    height: 60px;
+    width: 50vw;
+    border: none;
+    border-radius: 20px;
+    text-indent: 10px;
+    background-color: rgba(255, 255, 255, 0.824);
+    color: var(--input-color);
+    margin-left: 65px;
+
+}
+
+.search-url input::placeholder {
+    color: var(--back-color);
+}
+
+.search-url input[type=button] {
+    height: 60px;
+    width: 100px;
+    border: none;
+    border-radius: 0px 18px 18px 0px;
+    padding: 10px;
+    position: relative;
+    left: -104px;
+    background-color: var(--back-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: .1s ease;
+    border: inset 2px #00e5ff;
+    border-left: none;
+}
+
+.search-url input[type=button]:active {
+    background-color: #00e5ff;
+    color: #0b0f1a;
+    /* transform: translateY(2px); */
+}
+
+/* .url-enter {
+    color: rgb(255, 255, 255);
+    font-size: large;
+    margin: 10px;
+    margin-left: 85px;
+} */
+
+.search-url h2 {
+    color: var(--title-color);
+    text-align: center;
+}
+
+.title p {
+    color: var(--sub-title-color);
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.title {
+    /* border: 2px solid white;*/
+    position: relative;
+    top: -40px;
+    font-size: 22px;
+    /* background-color: rgba(0, 0, 0, 0.518); */
+    /* padding: 20px; */
+    border-radius: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    color: var(--title-color);
+    height: 70vh;
+    width: 100%;
+    margin: 80px 0px;
+}
+
+.card1:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 0 5px var(--title-color), 0 0 25px var(--title-color);
+}
+
+.card2:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 0 5px var(--title-color), 0 0 25px var(--title-color);
+}
+
+.card3:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 0 5px var(--title-color), 0 0 25px var(--title-color);
+}
+
+.card1 {
+    height: 70vh;
+    width: 25vw;
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: .3s ease;
+}
+
+.card2 {
+    height: 70vh;
+    width: 25vw;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.card3 {
+    height: 70vh;
+    width: 25vw;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.card-logo {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 50%;
+    font-size: 120px;
+}
+
+.card1 u {
+    text-align: center;
+    font-size: larger;
+}
+
+.card2 u {
+    text-align: center;
+    font-size: larger;
+}
+
+.card3 u {
+    text-align: center;
+    font-size: larger;
+}
+
+.card1 p {
+    padding: 20px;
+}
+
+.card2 p {
+    padding: 20px;
+}
+
+.card3 p {
+    padding: 20px;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-button button {
+    background-color: var(--text-color);
+    color: var(--back-color);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* .main-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+} */
+
+.main-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding: 0 20px;
+    /* ✅ prevents overflow */
+}
+
+
+/* .result {
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 50px;
+    background: #11162a;
+    border-radius: 10px;
+    word-wrap: break-word;
+    /* overflow-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+ */
+
+.result {
+    width: 100%;
+    max-width: 900px;
+    /* ✅ keeps it inside container */
+    min-height: 200px;
+    /* ✅ small default height */
+    height: auto;
+    /* ✅ allow content to grow */
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 50px;
+    background: #11162a;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white,
+                0 0 25px white;
+
+    /* text handling */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    /* safety */
+    overflow-x: hidden;
+    /* ✅ no horizontal scroll */
+}
+
+
+/* .result p {
+    margin: 20px;
+    list-style-position: inside;
+} */
+
+.result p {
+    margin: 15px 0;
+    list-style-position: inside;
+    line-height: 1.6;
+    /* ✅ better readability */
+}
+
+.hidden {
+    display: none;
+}
+
+.read-more {
+    margin: 25px;
+}
+
+.read-more p {
+    color: var(--title-color);
+    text-indent: 20px;
+    margin-top: 5px;
+}
+
+.read-more h2 {
+    color: var(--text-color);
+    text-decoration: underline;
+    margin-left: 10px;
+    list-style-position: inside;
+}
+
+footer {
+    /* height: 30vh; */
+    background-color: #060912;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    border-top: 2px solid #00e5ff;
+    box-shadow: 0 0 5px #00e5ff,
+                0 0 25px #00e5ff;
+}
+
+.footer-top {
+    display: flex;
+}
+
+.footer-div-1 {
+    background-color: #060912;
+    color: var(--sub-title-color);
+    border-right: 2px solid white;
+    width: 50%;
+    height: 20vh;
+    margin-top: 22px;
+    margin-left: 170px;
+    padding-right: 30px;
+}
+
+.footer-div-1 li{
+    margin-top: 5px;
+}
+
+.footer-div-2 {
+    background-color: #060912;
+    color: var(--sub-title-color);
+    /* border: 2px solid white; */
+    width: 50%;
+    height: 20vh;
+    margin-top: 22px;
+    margin-left: 170px;
+}
+
+.footer-div p {
+    text-decoration: underline;
+    margin: 0px 0px 10px 10px;
+}
+
+.footer-li {
+    padding-left: 40px;
+    list-style-position: inside;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: var(--sub-title-color);
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ---------- Container ---------- */
+    .container {
+        height: auto;
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    .search-url {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* ---------- Title ---------- */
+    .title {
+        position: static;
+        font-size: 18px;
+    }
+
+    .title h2 {
+        font-size: 22px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    /* ---------- Search Input ---------- */
+    .search-url input[type=search] {
+        width: 90%;
+        height: 50px;
+        margin-left: 0;
+        border-radius: 15px;
+        font-size: 14px;
+    }
+
+    /* ---------- Search Button ---------- */
+    .search-url input[type=button] {
+        position: static;
+        width: 90%;
+        height: 45px;
+        border-radius: 15px;
+        font-size: 14px;
+        border-left: inset 2px #00e5ff;
+    }
+
+    /* ---------- Result Section ---------- */
+    .result {
+        height: auto;
+        padding: 15px;
+        padding-left: 20px;
+    }
+
+    .result p {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    /* ---------- Cards ---------- */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 25px;
+        margin: 40px 0;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .card-logo {
+        height: auto;
+        font-size: 80px;
+        margin-top: 20px;
+    }
+
+    .card1 p,
+    .card2 p,
+    .card3 p {
+        font-size: 14px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Disable hover jump on mobile */
+    /* .card1:hover,
+    .card2:hover,
+    .card3:hover {
+        transform: none;
+        box-shadow: none;
+    } */
+
+    /* ---------- Read More ---------- */
+    .read-more {
+        margin: 15px;
+    }
+
+    .read-more h2 {
+        font-size: 18px;
+    }
+
+    .read-more p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-div {
+        margin: 20px auto;
+    }
+
+    .footer-div-1,
+    .footer-div-2 {
+        max-width: 100%;
+        height: auto;
+        border-right: none;
+    }
+
+    .footer-li {
+        padding-left: 0;
+        list-style: none;
+        font-size: 14px;
+    }
+}
