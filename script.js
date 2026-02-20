@@ -44,8 +44,20 @@ async function scanURL() {
 
 
   try {
+    // const response = await fetch(
+    //   // "https://frederic-rainy-lispily.ngrok-free.dev/check-url",
+    //   "https://saflynxhr.onrender.com/check-url",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ url }),
+    //   }
+    // );
+
     const response = await fetch(
-      "https://frederic-rainy-lispily.ngrok-free.dev/check-url",
+      "https://saflynxhr.onrender.com/check-url",
       {
         method: "POST",
         headers: {
