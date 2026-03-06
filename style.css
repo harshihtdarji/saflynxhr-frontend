@@ -146,10 +146,31 @@ body {
 }
 
 .title p {
+    /* position: relative;
+    left: 177px; */
     color: var(--sub-title-color);
     font-size: 20px;
     text-align: center;
     margin: 10px;
+}
+.typing{
+    /* typing */
+    display: inline-block;
+    width: 43ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid whitesmoke;
+    animation: typing 5s steps(43) 0.5s infinite alternate-reverse;
+}
+
+@keyframes typing {
+    from{
+        width: 0ch;
+    }
+
+    to{
+        width: 44ch;
+    } 
 }
 
 .title {
@@ -594,5 +615,12 @@ footer {
         padding-left: 0;
         list-style: none;
         font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 777px) {
+    .title p{
+        position: relative;
+        left: 177px;
     }
 }
