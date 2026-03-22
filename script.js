@@ -105,7 +105,7 @@ async function scanURL() {
 
   } catch (error) {
     console.error("Error scanning URL:", error);
-    alert("Failed to scan URL. Is the backend running?");
+    alert("Failed to scan URL. May be server was down, Please try again later!");
   }
 }
 
